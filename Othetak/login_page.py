@@ -1,6 +1,6 @@
 import requests
 
-URL = "http://othetak.com"  # 모니터링할 웹페이지 URL
+URL = "https://othetak.com/auth/signIn"  # 모니터링할 웹페이지 URL
 
 
 def check_website_status(url):
