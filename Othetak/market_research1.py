@@ -145,7 +145,7 @@ def run(playwright: Playwright) -> None:
 	# AI 매칭 진행
 	market_search_AI_match(page)
 
-	time.sleep(10)
+	time.sleep(15)
 
 	page.reload()
 
