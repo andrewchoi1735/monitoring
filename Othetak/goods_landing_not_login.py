@@ -30,7 +30,7 @@ def check_api_data_count(api_url, params):
 
 
 def push_to_prometheus(count):
-	url = "http://localhost:9091/metrics/job/my_job"
+	url = "http://localhost:9091/metrics/job/job1"
 	data = f"count {count}\n"
 	response = requests.post(url, data=data)
 	return response.status_code

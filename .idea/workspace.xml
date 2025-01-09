@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d7ae87c-15fe-4a2e-b6bb-aa3a54f72b0c" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/Othetak/goods_landing_login.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Othetak/goods_landing_not_login.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Othetak/goods_comparison.py" beforeDir="false" afterPath="$PROJECT_DIR$/Othetak/goods_comparison.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Othetak/goods_landing_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/Othetak/goods_landing_login.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Othetak/goods_landing_not_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/Othetak/goods_landing_not_login.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +51,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python.goods_comparison.executor": "Run",
+    "Python.goods_landing_login.executor": "Run",
     "Python.goods_landing_not_login.executor": "Run",
     "Python.goods_search1.executor": "Run",
     "Python.goods_search2.executor": "Run",
@@ -94,7 +96,7 @@
       <workItem from="1736295888866" duration="1632000" />
       <workItem from="1736297543395" duration="81000" />
       <workItem from="1736297635509" duration="6064000" />
-      <workItem from="1736378931788" duration="3440000" />
+      <workItem from="1736378931788" duration="6210000" />
     </task>
     <servers />
   </component>
@@ -127,10 +129,11 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/monitoring$login_page.coverage" NAME="login_page 커버리지 결과" MODIFIED="1736296222558" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Odmin" />
     <SUITE FILE_PATH="coverage/monitoring$goods_search1.coverage" NAME="goods_search1 커버리지 결과" MODIFIED="1736297060383" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Othetak" />
-    <SUITE FILE_PATH="coverage/monitoring$goods_landing_not_login.coverage" NAME="goods_landing_not_login 커버리지 결과" MODIFIED="1736382637552" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Othetak" />
+    <SUITE FILE_PATH="coverage/monitoring$goods_landing_not_login.coverage" NAME="goods_landing_not_login 커버리지 결과" MODIFIED="1736384527792" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Othetak" />
     <SUITE FILE_PATH="coverage/monitoring$main.coverage" NAME="main 커버리지 결과" MODIFIED="1736295986623" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Othetak" />
     <SUITE FILE_PATH="coverage/monitoring$market_research2.coverage" NAME="market_research2 커버리지 결과" MODIFIED="1736297597066" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Othetak" />
     <SUITE FILE_PATH="coverage/monitoring$goods_search2.coverage" NAME="goods_search2 커버리지 결과" MODIFIED="1736297062994" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Othetak" />
-    <SUITE FILE_PATH="coverage/monitoring$goods_comparison.coverage" NAME="goods_comparison 커버리지 결과" MODIFIED="1736297355528" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Othetak" />
+    <SUITE FILE_PATH="coverage/monitoring$goods_comparison.coverage" NAME="goods_comparison 커버리지 결과" MODIFIED="1736385617980" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Othetak" />
+    <SUITE FILE_PATH="coverage/monitoring$goods_landing_login.coverage" NAME="goods_landing_login 커버리지 결과" MODIFIED="1736385736324" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Othetak" />
   </component>
 </project>
