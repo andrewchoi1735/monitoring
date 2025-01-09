@@ -4,7 +4,6 @@ from datetime import datetime
 BASE_URL = "https://api.othetak.com:8080"
 LOGIN_URL = f"{BASE_URL}/v2/sign/signIn"
 DATA_URL = f"{BASE_URL}/v2/guest/goods/integrated-landing-record"
-PROMETHEUS_URL = "http://localhost:9091/metrics/job/dajeon_count"
 
 # 날짜
 today_date = datetime.now().strftime("%Y-%m-%d")
@@ -57,7 +56,7 @@ def fetch_data_with_login():
 				items = data["data"]["goodsIntegrated"]
 				item_count = len(items)
 				print(f"Total number of items: {item_count}")
-				push_to_prometheus("job2", "item_count", item_count)
+				push_to_prometheus("goods_dajeon", "item_count", item_count)
 			else:
 				print("Unexpected response structure:", data)
 		else:
