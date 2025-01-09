@@ -1,16 +1,59 @@
 pipeline {
     agent any
     stages {
-        stage('Checkout') {
+        stage('Clone Repository') {
             steps {
-                git url: 'https://github.com/andrewchoi1735/monitoring.git', branch: 'main'
+                script {
+                    try {
+                        sh 'git clone https://github.com/andrewchoi1735/monitoring.git'
+                    } catch (Exception e) {
+                        currentBuild.result = 'FAILURE'
+                        throw e
+                    }
+                }
             }
         }
-        stage('Run Specific File') {
+        stage('Pull Updates') {
             steps {
-                sh 'chmod +x path/to/your_script.sh' // 실행 권한 부여
-                sh './path/to/your_script.sh' // 파일 실행
+                script {
+                    dir('monitoring/Othetak') {
+                        try {
+                            sh 'git pull'
+                        } catch (Exception e) {
+                            currentBuild.result = 'FAILURE'
+                            throw e
+                        }
+                    }
+                }
             }
+        }
+        stage('Run Python Script') {
+            steps {
+                script {
+                    dir('monitoring/Othetak') {
+                        try {
+                            sh 'python3 main.py'
+                        } catch (Exception e) {
+                            currentBuild.result = 'FAILURE'
+                            throw e
+                        }
+                    }
+                }
+            }
+        }
+    }
+    post {
+        failure {
+            script {
+                def currentTime = new Date().time / 1000
+                echo "빌드 실패 시간: ${new Date(currentTime * 1000).format('yyyy-MM-dd HH:mm:ss')}"
+
+                // Prometheus에 메트릭 전송
+                sh "echo 'jenkins_build_fail_time{job_name=\"website_stat\"} ${currentTime}' | curl --data-binary @- http://localhost:9090/metrics/job/jenkins"
+            }
+        }
+        success {
+            echo "빌드 성공"
         }
     }
 }
