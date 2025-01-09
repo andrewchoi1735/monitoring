@@ -1,22 +1,26 @@
 import requests
-
+from datetime import datetime
 # 상수
 BASE_URL = "https://api.othetak.com:8080"
 LOGIN_URL = f"{BASE_URL}/v2/sign/signIn"
 DATA_URL = f"{BASE_URL}/v2/guest/goods/integrated-landing-record"
-PROMETHEUS_URL = "http://localhost:9091/metrics/job/job2"
+PROMETHEUS_URL = "http://localhost:9091/metrics/job/seoul_count"
+
+# 날짜
+today_date = datetime.now().strftime("%Y-%m-%d")
+
 
 # 로그인 정보
 payload = {
-	"userId":"andrewchoi",
-	"password":"ee123123"
+	"userId":"monitor2",
+	"password":"qwer1234!@#$"
 }
 
 # 데이터 요청 파라미터
 params = {
 	"sortBasisCode":"",
 	"perPage":100,
-	"priceBasisDate":"2025-01-09",
+	"priceBasisDate":today_date,
 	"distributionSpecialtyName":"",
 	"storeName":"",
 	"goodsName":"",
