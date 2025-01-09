@@ -56,7 +56,7 @@ def fetch_data_with_login():
 				items = data["data"]["goodsIntegrated"]
 				item_count = len(items)
 				print(f"Total number of items: {item_count}")
-				push_to_prometheus("goods_incheon", "item_count", item_count)
+				push_to_prometheus(item_count)
 			else:
 				print("Unexpected response structure:", data)
 		else:
@@ -68,17 +68,11 @@ def fetch_data_with_login():
 		print(f"알 수 없는 오류 발생: {e}")
 
 
-def push_to_prometheus(job_name, metric_name, metric_value):
-	"""Prometheus PushGateway에 메트릭 데이터를 전송"""
-	url = f"http://localhost:9091/metrics/job/{job_name}"
-	data = f"{metric_name} {metric_value}\n"
-	try:
-		response = requests.post(url, data=data)
-		print(f"Prometheus pushed successfully: {response.status_code}")
-		return response.status_code
-	except requests.exceptions.RequestException as e:
-		print(f"Prometheus push failed: {e}")
-		return None
+def push_to_prometheus(count):
+	url = "http://localhost:9091/metrics/job/goods_incheon"
+	data = f"count {count}\n"
+	response = requests.post(url, data=data)
+	return response.status_code
 
 
 if __name__ == "__main__":
