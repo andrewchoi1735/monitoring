@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d7ae87c-15fe-4a2e-b6bb-aa3a54f72b0c" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/Othetak/push_build_status.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Othetak/push_build_status.py" beforeDir="false" afterPath="$PROJECT_DIR$/Othetak/push_build_status.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +95,7 @@
       <workItem from="1736295888866" duration="1632000" />
       <workItem from="1736297543395" duration="81000" />
       <workItem from="1736297635509" duration="6064000" />
-      <workItem from="1736378931788" duration="11581000" />
+      <workItem from="1736378931788" duration="11940000" />
     </task>
     <servers />
   </component>
