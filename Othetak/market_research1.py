@@ -117,9 +117,6 @@ def match_check(page, retries=5):
 			print("매칭 시도가 실패했습니다.")
 			return False
 
-	else:
-		sys.exit(-1)
-
 
 def othetak_login(page):
 	page.get_by_placeholder("아이디").fill("andrewchoi")
