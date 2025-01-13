@@ -30,8 +30,8 @@ def sanitize_metric_name(name):
 
 def fetch_data_with_login(region, userId=None, password=None):
 	"""
-    특정 계정/지역에 대해 데이터를 가져온 후 Prometheus로 전송.
-    """
+	특정 계정/지역에 대해 데이터를 가져온 후 Prometheus로 전송.
+	"""
 	try:
 		session = requests.Session()
 		token = None
@@ -40,9 +40,6 @@ def fetch_data_with_login(region, userId=None, password=None):
 		if userId and password:
 			payload = {"userId":userId, "password":password}
 			login_response = session.post(LOGIN_URL, json=payload)
-			print(f"[{region}] 로그인 응답 상태 코드: {login_response.status_code}")
-			print(f"[{region}] 로그인 응답 데이터: {login_response.text}")
-
 			response_data = login_response.json()
 			if login_response.status_code == 200 and response_data.get("result") is True:
 				token = response_data.get("token")
@@ -56,13 +53,17 @@ def fetch_data_with_login(region, userId=None, password=None):
 		# 데이터 요청
 		headers = {"Authorization":f"Bearer {token}"} if token else {}
 		response = session.get(DATA_URL, headers=headers)
-		print(f"[{region}] 데이터 응답 상태 코드: {response.status_code}")
-		print(f"[{region}] 데이터 응답 본문: {response.text}")
 
 		if response.status_code == 200:
 			data = response.json()
 			if "data" in data and isinstance(data["data"], dict):
 				section_counts = {key:len(items) for key, items in data["data"].items()}
+
+				# 데이터가 없는 경우 처리
+				if not section_counts:
+					print(f"[{region}] 섹션 데이터가 비어 있습니다. 전송 건너뜀.")
+					return
+
 				print(f"[{region}] 섹션별 아이템 개수: {section_counts}")
 				push_sections_to_prometheus(region, section_counts)
 			else:
@@ -78,9 +79,13 @@ def fetch_data_with_login(region, userId=None, password=None):
 
 def push_sections_to_prometheus(region, section_counts):
 	"""
-    Prometheus PushGateway에 섹션별 데이터 개수 푸시
+    Prometheus PushGateway에 섹션별 데이터 개수 푸시.
+    지역 정보를 포함하여 각기 다른 job으로 전송.
     """
-	url = PROMETHEUS_BASE_URL  # URL 수정
+	# 지역별 Job 이름 구성
+	region_job_name = f"goods3rd_{region}"  # ex: goods3rd_seoul
+	url = f"http://localhost:9091/metrics/job/{region_job_name}"  # 지역별 고유 URL
+
 	prometheus_data = ""  # 전송할 모든 데이터를 누적
 
 	for section, count in section_counts.items():
