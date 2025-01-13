@@ -1,55 +1,25 @@
 import requests
-from prometheus_client import CollectorRegistry, Gauge, push_to_gateway
 import sys
 
-# API URL
 api_url = "https://api.othetak.com:8080/main/goods3rd"
-pushgateway_url = "http://<pushgateway-host>:9091"  # PushGateway 주소
 
 
-def check_api_data_count(api_url):
+def check_api_status(api_url):
+	"""
+    API 상태를 확인하고 Jenkins 빌드 상태로 결정
+    """
 	try:
-		# 1. API 호출
+		# API 호출
 		response = requests.get(api_url)
-		response.raise_for_status()
-		data = response.json()
-
-		if not isinstance(data, dict):  # 응답 데이터가 dictionary인지 확인
-			print("Unexpected data type. Expected a dictionary.")
-			raise ValueError(f"Invalid API response structure: {type(data)}")
-
-		# 2. 각 섹션의 아이템 개수 계산
-		sections = ["best", "highBasicSearch", "new", "recommend"]
-		section_counts = {}
-
-		for section in sections:
-			section_counts[section] = len(data.get(section, []))  # 키가 없으면 빈 리스트로 처리
-			print(f"Section '{section}' item count: {section_counts[section]}")
-
-		# 3. Prometheus로 데이터 전송
-		# PushGateway 연결 설정
-		registry = CollectorRegistry()
-		for section, count in section_counts.items():
-			gauge = Gauge(f"api_items_count_{section}", f"Number of items in section {section}", registry=registry)
-			gauge.set(count)
-
-		push_to_gateway(pushgateway_url, job="api_data_count_job", registry=registry)
-		print("Item counts have been successfully pushed to PushGateway.")
-
-		# 4. 빌드 성공 처리
-		print("API is Normal.")
-		return True
+		response.raise_for_status()  # 응답이 200이 아니면 예외 발생
+		print(f"API responded with status {response.status_code}: Success.")
+		sys.exit(0)  # 정상 상태 (빌드 성공)
 
 	except requests.exceptions.RequestException as e:
-		print(f"API request error: {e}")
-		sys.exit(1)  # 빌드 실패로 처리
-	except ValueError as e:
-		print(f"ValueError: {e}")
-		sys.exit(1)  # 빌드 실패로 처리
-	except Exception as e:
-		print(f"Unexpected error: {e}")
-		sys.exit(1)  # 빌드 실패로 처리
+		# 예외 발생 시 오류 출력 및 빌드 실패
+		print(f"API request failed: {e}")
+		sys.exit(1)  # 비정상 상태 (빌드 실패)
 
 
 if __name__ == "__main__":
-	check_api_data_count(api_url)
+	check_api_status(api_url)
