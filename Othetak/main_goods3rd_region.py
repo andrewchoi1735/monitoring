@@ -107,7 +107,6 @@ def push_sections_to_prometheus(region, section_counts):
 	except requests.exceptions.RequestException as e:
 		print(f"[{region}] Prometheus 전송 중 오류 발생: {e}")
 
-
 if __name__ == "__main__":
 	for region_info in regions:
 		fetch_data_with_login(
