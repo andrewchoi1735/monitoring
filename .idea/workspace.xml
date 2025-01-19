@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d7ae87c-15fe-4a2e-b6bb-aa3a54f72b0c" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/Othetak/main_bigbanner.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Othetak/main_popup.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Othetak/main_topbanner.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Odmin/email_check.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Odmin/sms_check.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,12 +30,12 @@
     &quot;assignee&quot;: &quot;andrewchoi1735&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/andrewchoi1735/monitoring.git",
-    "accountId": "ee8a4ef6-d72f-4934-b1a5-6dbcc7c8135a"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/andrewchoi1735/monitoring.git&quot;,
+    &quot;accountId&quot;: &quot;ee8a4ef6-d72f-4934-b1a5-6dbcc7c8135a&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -48,38 +47,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.goods_comparison.executor": "Run",
-    "Python.goods_landing_login.executor": "Run",
-    "Python.goods_landing_login_incheon.executor": "Run",
-    "Python.goods_landing_login_seoul.executor": "Run",
-    "Python.goods_landing_not_login.executor": "Run",
-    "Python.goods_search1.executor": "Run",
-    "Python.goods_search2.executor": "Run",
-    "Python.login_page.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.main_bigbanner.executor": "Run",
-    "Python.main_goods3rd_api.executor": "Run",
-    "Python.main_goods3rd_region.executor": "Run",
-    "Python.main_topbanner.executor": "Run",
-    "Python.market_research1.executor": "Run",
-    "Python.market_research2.executor": "Run",
-    "Python.suspend_update.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/doyun/PycharmProjects/PythonProject/monitoring/Othetak",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.email_check.executor&quot;: &quot;Run&quot;,
+    &quot;Python.goods_comparison.executor&quot;: &quot;Run&quot;,
+    &quot;Python.goods_landing_login.executor&quot;: &quot;Run&quot;,
+    &quot;Python.goods_landing_login_incheon.executor&quot;: &quot;Run&quot;,
+    &quot;Python.goods_landing_login_seoul.executor&quot;: &quot;Run&quot;,
+    &quot;Python.goods_landing_not_login.executor&quot;: &quot;Run&quot;,
+    &quot;Python.goods_search1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.goods_search2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.login_page.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main_bigbanner.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main_goods3rd_api.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main_goods3rd_region.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main_popup.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main_topbanner.executor&quot;: &quot;Run&quot;,
+    &quot;Python.market_research1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.market_research2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.sms_check.executor&quot;: &quot;Run&quot;,
+    &quot;Python.suspend_update.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/doyun/PycharmProjects/PythonProject/monitoring/Othetak&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\doyun\PycharmProjects\PythonProject\monitoring\Othetak" />
@@ -108,7 +110,13 @@
       <workItem from="1736378931788" duration="21274000" />
       <workItem from="1736754354598" duration="2670000" />
       <workItem from="1736810649089" duration="905000" />
-      <workItem from="1736812717952" duration="4926000" />
+      <workItem from="1736812717952" duration="5938000" />
+      <workItem from="1736836764635" duration="3439000" />
+      <workItem from="1736902370265" duration="79000" />
+      <workItem from="1736906176348" duration="1252000" />
+      <workItem from="1736916078105" duration="1218000" />
+      <workItem from="1737083059265" duration="9499000" />
+      <workItem from="1737329097777" duration="230000" />
     </task>
     <servers />
   </component>
@@ -145,11 +153,14 @@
     <SUITE FILE_PATH="coverage/monitoring$main.coverage" NAME="main 커버리지 결과" MODIFIED="1736390633672" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Othetak" />
     <SUITE FILE_PATH="coverage/monitoring$market_research2.coverage" NAME="market_research2 커버리지 결과" MODIFIED="1736401748072" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Othetak" />
     <SUITE FILE_PATH="coverage/monitoring$goods_comparison.coverage" NAME="goods_comparison 커버리지 결과" MODIFIED="1736385617980" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Othetak" />
+    <SUITE FILE_PATH="coverage/monitoring$main_popup.coverage" NAME="main_popup 커버리지 결과" MODIFIED="1736835455797" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Othetak" />
     <SUITE FILE_PATH="coverage/monitoring$main_topbanner.coverage" NAME="main_topbanner 커버리지 결과" MODIFIED="1736835419587" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Othetak" />
     <SUITE FILE_PATH="coverage/monitoring$login_page.coverage" NAME="login_page 커버리지 결과" MODIFIED="1736296222558" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Odmin" />
     <SUITE FILE_PATH="coverage/monitoring$main_goods3rd_region.coverage" NAME="main_goods3rd_region 커버리지 결과" MODIFIED="1736815680749" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Othetak" />
     <SUITE FILE_PATH="coverage/monitoring$main_bigbanner.coverage" NAME="main_bigbanner 커버리지 결과" MODIFIED="1736830925121" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Othetak" />
     <SUITE FILE_PATH="coverage/monitoring$market_research1.coverage" NAME="market_research1 커버리지 결과" MODIFIED="1736403444737" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Othetak" />
+    <SUITE FILE_PATH="coverage/monitoring$sms_check.coverage" NAME="sms_check 커버리지 결과" MODIFIED="1737329193210" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Odmin" />
+    <SUITE FILE_PATH="coverage/monitoring$email_check.coverage" NAME="email_check 커버리지 결과" MODIFIED="1737329182809" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Odmin" />
     <SUITE FILE_PATH="coverage/monitoring$suspend_update.coverage" NAME="suspend_update 커버리지 결과" MODIFIED="1736408008459" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Othetak" />
     <SUITE FILE_PATH="coverage/monitoring$goods_search2.coverage" NAME="goods_search2 커버리지 결과" MODIFIED="1736297062994" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Othetak" />
     <SUITE FILE_PATH="coverage/monitoring$goods_landing_login_seoul.coverage" NAME="goods_landing_login_seoul 커버리지 결과" MODIFIED="1736389562741" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Othetak" />
