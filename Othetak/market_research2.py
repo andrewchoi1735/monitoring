@@ -90,7 +90,7 @@ def run(playwright: Playwright) -> None:
 	# AI 매칭 진행
 	market_search_AI_match(page)
 
-	time.sleep(3)
+	time.sleep(5)
 
 	check_move_to_list(page)
 
