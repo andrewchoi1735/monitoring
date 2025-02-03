@@ -42,12 +42,12 @@ def market_search_AI_match(page):
 	time.sleep(0.5)
 	# 매칭 버튼 클릭
 	page.locator(
-		"body > div.MuiModal-root.css-1sucic7 > div.css-xna42m > div:nth-child(4) > button.css-1xdk21t").click()
+		"body > div.MuiModal-root.css-1sucic7 > div.css-xna42m > div:nth-child(4) > button.css-fyy9di").click()
 	time.sleep(0.5)
 	# 매칭 진행 여부 팝업
 	if page.locator("body > div.MuiModal-root.css-1sucic7 > div.MuiBox-root.css-8kenvv > div").is_visible():
 		page.locator(
-			"body > div.MuiModal-root.css-1sucic7 > div.MuiBox-root.css-8kenvv > div > div.alert__btn-wrapper > button.css-1xdk21t").click()
+			"body > div.MuiModal-root.css-1sucic7 > div.MuiBox-root.css-8kenvv > div > div.alert__btn-wrapper > button.css-fyy9di").click()
 	else:
 		print("뭔가 잘못됐는데여?")
 
