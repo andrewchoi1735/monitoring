@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d7ae87c-15fe-4a2e-b6bb-aa3a54f72b0c" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/Odmin/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Oseller/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Othetak/market_research2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Othetak/market_research2.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +36,33 @@
     &quot;accountId&quot;: &quot;ee8a4ef6-d72f-4934-b1a5-6dbcc7c8135a&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Odmin/email_check.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Odmin/login_page.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Odmin/main.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Odmin/sms_check.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Oseller/login_page.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Othetak/goods_landing_login_dajeon.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Othetak/goods_landing_login_incheon.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Othetak/goods_landing_login_sejong.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Othetak/goods_landing_login_seoul.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Othetak/goods_landing_not_login.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Othetak/goods_search1.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Othetak/goods_search2.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Othetak/login_page.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Othetak/main.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Othetak/main_bigbanner.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Othetak/main_goods3rd_api.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Othetak/main_goods3rd_region.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Othetak/main_popup.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Othetak/main_topbanner.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Othetak/market_research1.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Othetak/market_research2.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Othetak/recipe.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Othetak/suspend.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Othetak/suspend_update.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Othetak/the_store.py" root0="SKIP_INSPECTION" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -46,44 +74,48 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.email_check.executor&quot;: &quot;Run&quot;,
-    &quot;Python.goods_comparison.executor&quot;: &quot;Run&quot;,
-    &quot;Python.goods_landing_login.executor&quot;: &quot;Run&quot;,
-    &quot;Python.goods_landing_login_incheon.executor&quot;: &quot;Run&quot;,
-    &quot;Python.goods_landing_login_seoul.executor&quot;: &quot;Run&quot;,
-    &quot;Python.goods_landing_not_login.executor&quot;: &quot;Run&quot;,
-    &quot;Python.goods_search1.executor&quot;: &quot;Run&quot;,
-    &quot;Python.goods_search2.executor&quot;: &quot;Run&quot;,
-    &quot;Python.login_page.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main_bigbanner.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main_goods3rd_api.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main_goods3rd_region.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main_popup.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main_topbanner.executor&quot;: &quot;Run&quot;,
-    &quot;Python.market_research1.executor&quot;: &quot;Run&quot;,
-    &quot;Python.market_research2.executor&quot;: &quot;Run&quot;,
-    &quot;Python.sms_check.executor&quot;: &quot;Run&quot;,
-    &quot;Python.suspend_update.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/doyun/PycharmProjects/PythonProject/monitoring/Othetak&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.email_check.executor": "Run",
+    "Python.goods_comparison.executor": "Run",
+    "Python.goods_landing_login.executor": "Run",
+    "Python.goods_landing_login_incheon.executor": "Run",
+    "Python.goods_landing_login_seoul.executor": "Run",
+    "Python.goods_landing_not_login.executor": "Run",
+    "Python.goods_search1.executor": "Run",
+    "Python.goods_search2.executor": "Run",
+    "Python.login_page.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.main_bigbanner.executor": "Run",
+    "Python.main_goods3rd_api.executor": "Run",
+    "Python.main_goods3rd_region.executor": "Run",
+    "Python.main_popup.executor": "Run",
+    "Python.main_topbanner.executor": "Run",
+    "Python.market_research1.executor": "Run",
+    "Python.market_research2.executor": "Run",
+    "Python.sms_check.executor": "Run",
+    "Python.suspend_update.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/doyun/PycharmProjects/PythonProject/monitoring/Odmin",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\doyun\PycharmProjects\PythonProject\monitoring\Odmin" />
       <recent name="C:\Users\doyun\PycharmProjects\PythonProject\monitoring\Othetak" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\doyun\PycharmProjects\PythonProject\monitoring\Oseller" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -123,7 +155,8 @@
       <workItem from="1737435265199" duration="76000" />
       <workItem from="1737520639392" duration="1130000" />
       <workItem from="1737685097538" duration="1376000" />
-      <workItem from="1738539235519" duration="2263000" />
+      <workItem from="1738539235519" duration="2299000" />
+      <workItem from="1741584572622" duration="1649000" />
     </task>
     <servers />
   </component>
@@ -155,9 +188,9 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/monitoring$goods_landing_login_incheon.coverage" NAME="goods_landing_login_incheon 커버리지 결과" MODIFIED="1736755309586" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Othetak" />
-    <SUITE FILE_PATH="coverage/monitoring$goods_search1.coverage" NAME="goods_search1 커버리지 결과" MODIFIED="1736297060383" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Othetak" />
     <SUITE FILE_PATH="coverage/monitoring$goods_landing_not_login.coverage" NAME="goods_landing_not_login 커버리지 결과" MODIFIED="1736384527792" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Othetak" />
-    <SUITE FILE_PATH="coverage/monitoring$main.coverage" NAME="main 커버리지 결과" MODIFIED="1736390633672" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Othetak" />
+    <SUITE FILE_PATH="coverage/monitoring$goods_search1.coverage" NAME="goods_search1 커버리지 결과" MODIFIED="1736297060383" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Othetak" />
+    <SUITE FILE_PATH="coverage/monitoring$main.coverage" NAME="main 커버리지 결과" MODIFIED="1741584735627" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Odmin" />
     <SUITE FILE_PATH="coverage/monitoring$market_research2.coverage" NAME="market_research2 커버리지 결과" MODIFIED="1736401748072" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Othetak" />
     <SUITE FILE_PATH="coverage/monitoring$goods_comparison.coverage" NAME="goods_comparison 커버리지 결과" MODIFIED="1736385617980" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Othetak" />
     <SUITE FILE_PATH="coverage/monitoring$main_popup.coverage" NAME="main_popup 커버리지 결과" MODIFIED="1736835455797" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Othetak" />
