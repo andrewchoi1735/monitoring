@@ -7,11 +7,11 @@ import platform
 import shutil
 import concurrent.futures
 import logging
-import TOKEN
+import TOKEN as tk
 
 # ========== 로깅 설정 ==========
 logging.basicConfig(
-	level=logging.WARNING,
+	level=logging.INFO,
 	format='[%(asctime)s] [%(threadName)s] %(message)s',
 	datefmt='%H:%M:%S'
 )
@@ -19,8 +19,8 @@ logging.basicConfig(
 # ========== 설정 ==========
 Lighthouse_PATH = r"C:\Users\doyun\AppData\Roaming\npm\lighthouse.cmd"
 REPEAT = 3
-SLACK_CHANNEL = TOKEN.SLACK_CHANNEL
-SLACK_TOKEN = TOKEN.SLACK_TOKEN
+SLACK_CHANNEL = tk.SLACK_CHANNEL
+SLACK_TOKEN = tk.SLACK_TOKEN
 
 # 환경별 base URL 설정
 ENV_URLS = {
