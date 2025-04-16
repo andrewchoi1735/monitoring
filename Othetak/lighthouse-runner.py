@@ -8,6 +8,8 @@ import shutil
 import concurrent.futures
 import logging
 import TOKEN as tk
+import datetime
+import os
 
 # ========== 로깅 설정 ==========
 logging.basicConfig(
@@ -18,7 +20,7 @@ logging.basicConfig(
 
 # ========== 설정 ==========
 Lighthouse_PATH = r"C:\Users\doyun\AppData\Roaming\npm\lighthouse.cmd"
-REPEAT = 3
+REPEAT = 1
 SLACK_CHANNEL = tk.SLACK_CHANNEL
 SLACK_TOKEN = tk.SLACK_TOKEN
 
@@ -38,52 +40,63 @@ URL_PATHS = [
 
 
 # ========== Slack 전송 함수 ==========
-def send_slack_notification(url, summary_msg):
+def send_slack_notification(url, summary_msg, html_path=None):
 	client = WebClient(token=SLACK_TOKEN)
 	try:
+		blocks = [
+			{
+				"type":"header",
+				"text":{
+					"type":"plain_text",
+					"text":"📊 Lighthouse 자동 점수 리포트",
+					"emoji":True
+				}
+			},
+			{
+				"type":"section",
+				"fields":[
+					{
+						"type":"mrkdwn",
+						"text":f"*🌐 URL:*\n<{url}>"
+					},
+					{
+						"type":"mrkdwn",
+						"text":f"*🕒 측정횟수:*\n{REPEAT}회"
+					}
+				]
+			},
+			{"type":"divider"},
+			{
+				"type":"section",
+				"text":{
+					"type":"mrkdwn",
+					"text":summary_msg
+				}
+			},
+			{"type":"divider"},
+			{
+				"type":"section",
+				"text":{
+					"type":"mrkdwn",
+					"text":get_lighthouse_env()
+				}
+			}
+		]
+
+		if html_path:
+			blocks.append({
+				"type":"section",
+				"text":{
+					"type":"mrkdwn",
+					"text":f"📁 *리포트 파일 저장 위치:*\n`{html_path}`"
+				}
+			})
+
 		response = client.chat_postMessage(
 			channel=SLACK_CHANNEL,
 			text=summary_msg,
 			unfurl_links=False,
-			blocks=[
-				{
-					"type":"header",
-					"text":{
-						"type":"plain_text",
-						"text":"📊 Lighthouse 자동 점수 리포트",
-						"emoji":True
-					}
-				},
-				{
-					"type":"section",
-					"fields":[
-						{
-							"type":"mrkdwn",
-							"text":f"*🌐 URL:*\n<{url}>"
-						},
-						{
-							"type":"mrkdwn",
-							"text":f"*🕒 측정횟수:*\n{REPEAT}회"
-						}
-					]
-				},
-				{"type":"divider"},
-				{
-					"type":"section",
-					"text":{
-						"type":"mrkdwn",
-						"text":summary_msg
-					}
-				},
-				{"type":"divider"},
-				{
-					"type":"section",
-					"text":{
-						"type":"mrkdwn",
-						"text":get_lighthouse_env()
-					}
-				}
-			]
+			blocks=blocks
 		)
 		logging.info(f"✅ [Slack 메시지 전송 완료] 종료된 url >> {url}")
 	except SlackApiError as e:
@@ -102,6 +115,7 @@ def get_lighthouse_env():
 		f"• OS: `{os_info}`\n"
 		f"• Node.js: `{node_ver}`\n"
 		f"• Lighthouse: `{lh_ver}`\n"
+		f"• Preset: '🖥️ Desktop'\n"
 	)
 
 
@@ -114,22 +128,29 @@ def measure_url(url):
 		"seo":[]
 	}
 
+	os.makedirs("reports", exist_ok=True)
+	timestamp = datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
+	safe_filename = url.replace("https://", "").replace("/", "_")
+	report_base = f"reports/{safe_filename}_{timestamp}"
+
 	for i in range(REPEAT):
 		logging.info(f"🔁 Run #{i + 1} for {url}")
 		result = subprocess.run([
 			Lighthouse_PATH,
 			url,
 			"--output=json",
+			"--output=html",
+			f"--output-path={report_base}",
 			"--quiet",
 			"--chrome-flags=--headless",
-			"--output-path=report.json"
+			"--preset=desktop"
 		], capture_output=True, text=True)
 
 		if result.returncode != 0:
 			logging.error(f"❌ Lighthouse 실행 실패: {url} -> {result.stderr}")
 			continue
 
-		with open("report.json", "r", encoding="utf-8") as f:
+		with open(f"{report_base}.json", "r", encoding="utf-8") as f:
 			report = json.load(f)
 			categories = report["categories"]
 
@@ -150,8 +171,11 @@ def measure_url(url):
 			else:
 				message_lines.append(f"*⚪ {key.title()}*: `점수 없음`")
 
+		if not category_scores["performance"]:
+			message_lines.insert(0, "🚨 *Performance 점수 계산 실패!* (NO_LCP 또는 지표 없음)")
+
 		summary_message = "\n".join(message_lines)
-		send_slack_notification(url, summary_message)
+		send_slack_notification(url, summary_message, f"{report_base}.html")
 	else:
 		logging.warning(f"⚠️ {url}의 유효한 Lighthouse 점수가 없습니다.")
 
